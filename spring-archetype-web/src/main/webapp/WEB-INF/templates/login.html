@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:substituteby="common/base :: head"></head>
+<body>
+	<div class="container">
+		<header th:substituteby="common/base :: header"></header>
+		<div class="row">
+			<div class="span4 offset4 well">
+				<legend>Please Sign In</legend>
+				<div th:if="${error}" class="alert alert-error">
+					<a class="close" data-dismiss="alert" href="#">×</a>Incorrect Username or Password!
+				</div>
+				<form method="POST" th:action="@{/login}" accept-charset="UTF-8">
+					<input type="text" id="username" class="span4" name="username" placeholder="Username" />
+					<input type="password" id="password" class="span4" name="password" placeholder="Password" />
+					<label class="checkbox">
+						<input type="checkbox" name="remember" value="true" />
+						Remember Me
+					</label>
+					<button type="submit" name="submit" class="btn btn-info btn-block">Sign in</button>
+				</form>
+			</div>
+		</div>
+		<footer th:substituteby="common/base :: footer"></footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+	<head th:substituteby="common/base :: head"></head>
+	<body>
+		<div class="container">
+			<header th:substituteby="common/base :: header"></header>
+			<div class="jumbotron">
+			  <h1 th:text="#{home.welcomeTitle}">Hero unit title!</h1>
+			  <p th:text="#{home.welcomeText}">Welcome to the sample site</p>
+			  <p><a href="#" class="btn btn-primary btn-large" th:text="#{account.register}">Register</a></p>
+			</div>
+			<footer th:substituteby="common/base :: footer"></footer>
+		</div>
+	</body>
+</html>
